@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        inicializarVistas();
+
         //variables de logica
         contador = 0;
         listausuarios = new ArrayList<>();
