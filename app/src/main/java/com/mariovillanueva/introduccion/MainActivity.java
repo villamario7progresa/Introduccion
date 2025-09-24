@@ -52,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
           public void onClick(View v) {
               String email = txtEmail.getText().toString();
               String password = txtPassword.getText().toString();
+              UsuarioModel usuario = new UsuarioModel(email, password);
+              listausuarios.add(usuario);
+              Toast.makeText(MainActivity.this, usuario.toString(), Toast.LENGTH_LONG).show();
+              txtEmail.setText("");
+              txtPassword.setText("");
           }
       });
 
@@ -63,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         txtEmail=findViewById(R.id.txtEmailMain);
         txtPassword=findViewById(R.id.txtPasswordMain);
         btnRegistrarse =findViewById(R.id.btnRegistrarseMain);
-
     }
 
     /*public void BtnAprietameClick(View vista){
